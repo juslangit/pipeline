@@ -24,3 +24,7 @@ that confirms pivots, baked rotation, unit scale and mirrored normals.
   a signboard sharing a collection with a rigged banner silently became `SK_Scene`.
 - Added `tests/make_demo_scene.py`, which builds a demo scene exercising every
   feature — also the scene to use for the store screenshots.
+
+---
+
+Released free under GPL-3.0 on 2026-09-05 rather than sold.

@@ -6,6 +6,10 @@ updated: 2026-09-05
 
 # Launch plan — 14 days to first sale
 
+> **Superseded on 2026-09-05.** Pipeline is released free rather than sold, so the
+> storefront and pricing steps no longer apply. The promotion channel list and the
+> UE5 verification step are still valid for a free release.
+
 Goal: first money fast. Blender Market as the storefront. Marketing by posting,
 never on camera.
 
