@@ -6,6 +6,11 @@ updated: 2026-09-05
 
 # Store listing copy — Pipeline v1.0.0
 
+> **Superseded on 2026-09-05.** Pipeline is released free instead of sold. This
+> copy is kept because the description, FAQ and feature list are still the best
+> writing about what the add-on does, and are reusable for the GitHub README and
+> release notes. The pricing and storefront sections no longer apply.
+
 Paste-ready text for Blender Market / Gumroad / Payhip. Sections are marked with
 the field they belong in. Nothing here claims anything the add-on has not been
 tested doing — see the honesty gate at the bottom before publishing.

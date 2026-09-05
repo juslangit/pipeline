@@ -1,5 +1,8 @@
 # Pipeline — Unreal Batch Exporter
 
+**Free and open source (GPL-3.0).** Download the latest zip from
+[Releases](https://github.com/juslangit/pipeline/releases).
+
 A Blender add-on that turns a scene into Unreal-ready files in one click, with the
 naming, unit scale, pivots and collision meshes Unreal expects.
 
