@@ -75,8 +75,11 @@ on real hardware yet.
 ## Tests
 
 ```bash
-blender --background --python tests/test_pipeline.py
+blender --background --factory-startup --python tests/test_pipeline.py
 ```
+
+`--factory-startup` matters: without it Blender loads your installed copy of
+the add-on, which then collides with the source being tested.
 
 ## Licence
 

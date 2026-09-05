@@ -457,6 +457,23 @@ class PIPELINE_Issue(PropertyGroup):
     message: StringProperty()
 
 
+def validate_sets(sets):
+    """Problems that only show up once objects are grouped into files."""
+    issues = []
+    for eset in sets:
+        if not eset.skeletal:
+            continue
+        statics = [o for o in eset.objects
+                   if o.type == "MESH" and not is_collision(o) and not has_armature_deform(o)]
+        if statics:
+            issues.append((
+                "WARN", eset.name,
+                "One rig here makes the whole set skeletal — %d static mesh(es) "
+                "will be bundled into it. Split them out to get separate SM_ files."
+                % len(statics)))
+    return issues
+
+
 def validate_objects(objects, s):
     issues = []
 
@@ -606,7 +623,8 @@ class PIPELINE_OT_validate(Operator):
                 if obj not in objects:
                     objects.append(obj)
 
-        for severity, name, message in validate_objects(objects, s):
+        found = validate_objects(objects, s) + validate_sets(sets)
+        for severity, name, message in found:
             item = s.issues.add()
             item.severity = severity
             item.object_name = name
@@ -687,8 +705,10 @@ class PIPELINE_OT_export(Operator):
             self.report({"WARNING"}, "Nothing matched the current settings")
             return {"CANCELLED"}
 
-        blocking = [i for i in validate_objects(
-            [o for e in sets for o in e.objects], s) if i[0] == "ERROR"]
+        checked = validate_objects([o for e in sets for o in e.objects], s)
+        for _severity, name, message in validate_sets(sets):
+            self.report({"WARNING"}, "%s: %s" % (name, message))
+        blocking = [i for i in checked if i[0] == "ERROR"]
         if blocking and not s.dry_run:
             s.issues.clear()
             for severity, name, message in blocking:

@@ -197,6 +197,21 @@ def main():
     check(not os.path.isfile(os.path.join(out, "SM_Body.fbx")),
           "skinned mesh did not also export as a static mesh")
 
+    # --- a rig hidden among static meshes is warned about -----------------
+    fresh_scene()
+    add_cube("Prop_A")
+    rigged = add_cube("Rigged")
+    armature_data = bpy.data.armatures.new("Rig")
+    rig = bpy.data.objects.new("Rig", armature_data)
+    bpy.context.scene.collection.objects.link(rig)
+    rigged.modifiers.new("Armature", "ARMATURE").object = rig
+    s = bpy.context.scene.pipeline
+    s.export_root = out
+    s.mode = "COLLECTION"
+    bpy.ops.pipeline.validate()
+    check(any("whole set skeletal" in i.message for i in s.issues),
+          "warns when one rig makes a mixed collection skeletal")
+
     # --- validation catches a missing UV ---------------------------------
     fresh_scene()
     naked = add_cube("Naked")
