@@ -16,3 +16,11 @@ First release.
 
 Verified on Blender 5.2.1 LTS: 25 headless checks, including a full FBX round trip
 that confirms pivots, baked rotation, unit scale and mirrored normals.
+
+## 1.0.1 — 2026-09-05
+
+- Warn when one rigged mesh makes a whole collection export as a single skeletal
+  asset, bundling static meshes into it. Found by building a realistic test scene:
+  a signboard sharing a collection with a rigged banner silently became `SK_Scene`.
+- Added `tests/make_demo_scene.py`, which builds a demo scene exercising every
+  feature — also the scene to use for the store screenshots.
