@@ -7,7 +7,7 @@ tagline = "Batch export to Unreal with correct names, pivots and collision"
 maintainer = "Luqman Hakeem <academy@todak.com>"
 type = "add-on"
 
-website = "https://github.com/luqmanhakeem/pipeline"
+website = "https://github.com/juslangit/pipeline"
 tags = ["Import-Export", "Pipeline"]
 
 blender_version_min = "4.2.0"

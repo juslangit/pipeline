@@ -13,7 +13,7 @@ bl_info = {
     "location": "3D View > Sidebar (N) > Pipeline",
     "description": "Batch export collections and objects to Unreal Engine with "
                    "correct naming, unit scale, pivots and UCX collision.",
-    "doc_url": "https://github.com/luqmanhakeem/pipeline",
+    "doc_url": "https://github.com/juslangit/pipeline",
     "category": "Import-Export",
 }
 
