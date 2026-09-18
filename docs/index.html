@@ -8,16 +8,16 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@700;800&family=Inter:ital,wght@0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@500&display=swap">
 <style>
-:root { --ground: #FAF7F2; --surface: #FFFFFF; --ink: #1B1916; --muted: #6B655C; --line: #E2DDD4;
-  --accent: #A8620C; --accent-soft: #F6E8D4; --flag: #E8A33D; --flag-ink: #2A1D00; --done: #2A7148;
+:root { --ground: #FAF7F2; --surface: #FFFFFF; --ink: #2B2622; --muted: #6B6259; --line: #E7E1D8;
+  --accent: #2F6BB0; --accent-soft: #D6E6FA; --flag: #FFEEC9; --flag-ink: #A97B12; --done: #2F7A5C;
   --display: "Inter Tight", "Helvetica Neue", Arial, sans-serif;
   --body: "Inter", -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   --mono: "JetBrains Mono", ui-monospace, "SF Mono", Menlo, monospace;
   --heading-case: none; color-scheme: light; }
-@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --ground: #141210; --surface: #1C1A17; --ink: #F2EFE9; --muted: #A8A29A; --line: #2E2B27;
-  --accent: #E8A33D; --accent-soft: #2B2415; --done: #6CC592; color-scheme: dark; } }
-:root[data-theme="dark"] { --ground: #141210; --surface: #1C1A17; --ink: #F2EFE9; --muted: #A8A29A; --line: #2E2B27;
-  --accent: #E8A33D; --accent-soft: #2B2415; --done: #6CC592; color-scheme: dark; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --ground: #FAF7F2; --surface: #FFFFFF; --ink: #2B2622; --muted: #6B6259; --line: #E7E1D8;
+  --accent: #2F6BB0; --accent-soft: #D6E6FA; --done: #2F7A5C; color-scheme: dark; } }
+:root[data-theme="dark"] { --ground: #FAF7F2; --surface: #FFFFFF; --ink: #2B2622; --muted: #6B6259; --line: #E7E1D8;
+  --accent: #2F6BB0; --accent-soft: #D6E6FA; --done: #2F7A5C; color-scheme: dark; }
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
@@ -127,7 +127,7 @@ details.fold > div { padding: 2px 0 18px 22px; }
   <p class="eyebrow"><b>Pipeline</b><span>Project record · built 2026-09-17 from feat/ue5-verification</span></p>
   <h1>Pipeline</h1>
   <p class="thesis">Pipeline is a Blender add-on that batch-exports a scene to Unreal Engine with the naming, unit scale, pivots and collision meshes Unreal expects. It is the first digital product built to be sold online, chosen because it is pure code — no modelling or recording time — and because Luqman will use it himself when building the Malaysian environment asset packs planned as the next product.</p>
-  <div class="stats"><div class="stat"><b>6</b><span>commits</span></div><div class="stat"><b>13</b><span>days of work</span></div><div class="stat"><b>4</b><span>source files</span></div><div class="stat"><b>1,417</b><span>lines of code</span></div><div class="stat"><b>5</b><span>decisions recorded</span></div><div class="stat"><b>1</b><span>sessions logged</span></div></div>
+  <div class="stats"><div class="stat"><b>7</b><span>commits</span></div><div class="stat"><b>13</b><span>days of work</span></div><div class="stat"><b>5</b><span>source files</span></div><div class="stat"><b>1,930</b><span>lines of code</span></div><div class="stat"><b>5</b><span>decisions recorded</span></div><div class="stat"><b>1</b><span>sessions logged</span></div></div>
   
 </header>
 <section class="chapter notes" id="overview">
@@ -480,7 +480,7 @@ kwargs = {k: v for k, v in kwargs.items() if k in valid}</code></pre>
 <section class="chapter" id="history">
   <p class="kicker">git log on feat/ue5-verification, newest first</p>
   <h2>Git history</h2>
-  <details class="fold"><summary><span>Every commit</span></summary><div><div class="table"><table><thead><tr><th>Commit</th><th>Date</th><th>Change</th></tr></thead><tbody><tr class=""><td><code>2c5a7e4</code></td><td class="nowrap">2026-09-05</td><td>release pipeline free instead of selling it</td></tr><tr class=""><td><code>f542a6a</code></td><td class="nowrap">2026-09-05</td><td>warn when a hidden rig turns a whole collection skeletal</td></tr><tr class=""><td><code>d4ef316</code></td><td class="nowrap">2026-09-05</td><td>add ue5 verification checklist and 14-day launch plan</td></tr><tr class=""><td><code>37f904b</code></td><td class="nowrap">2026-09-05</td><td>point the add-on links at the real repository</td></tr><tr class=""><td><code>f058fae</code></td><td class="nowrap">2026-09-05</td><td>add store listing copy and launch assets brief</td></tr><tr class=""><td><code>8001293</code></td><td class="nowrap">2026-09-05</td><td>add pipeline unreal batch exporter v1.0.0</td></tr></tbody></table></div></div></details>
+  <details class="fold"><summary><span>Every commit</span></summary><div><div class="table"><table><thead><tr><th>Commit</th><th>Date</th><th>Change</th></tr></thead><tbody><tr class=""><td><code>e6c0fff</code></td><td class="nowrap">2026-09-17</td><td>Add the project record</td></tr><tr class=""><td><code>2c5a7e4</code></td><td class="nowrap">2026-09-05</td><td>release pipeline free instead of selling it</td></tr><tr class=""><td><code>f542a6a</code></td><td class="nowrap">2026-09-05</td><td>warn when a hidden rig turns a whole collection skeletal</td></tr><tr class=""><td><code>d4ef316</code></td><td class="nowrap">2026-09-05</td><td>add ue5 verification checklist and 14-day launch plan</td></tr><tr class=""><td><code>37f904b</code></td><td class="nowrap">2026-09-05</td><td>point the add-on links at the real repository</td></tr><tr class=""><td><code>f058fae</code></td><td class="nowrap">2026-09-05</td><td>add store listing copy and launch assets brief</td></tr><tr class=""><td><code>8001293</code></td><td class="nowrap">2026-09-05</td><td>add pipeline unreal batch exporter v1.0.0</td></tr></tbody></table></div></div></details>
 </section></main>
 </div>
 <!--mermaid-->
