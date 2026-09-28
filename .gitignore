@@ -17,3 +17,6 @@ __pycache__/
 
 # macOS
 .DS_Store
+
+# Project record: built locally, kept private
+docs/index.html
